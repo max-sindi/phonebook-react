@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom'
 
-import { Button } from 'semantic-ui-react';
+import { Container, Grid } from 'semantic-ui-react';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Button color='red'>
-          Semantic-UI button
-        </Button>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Container>
+            <Grid>
+              <Grid.Column>
+
+              </Grid.Column>
+            </Grid>
+          </Container>
+        </div>
+      </BrowserRouter>
     );
   }
 }
