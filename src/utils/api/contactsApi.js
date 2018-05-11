@@ -23,7 +23,7 @@ class ContactsApi {
 
       return data;
     } catch (e) {
-      return e;
+      throw e;
     }
   }
 }

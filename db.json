@@ -1,3 +1,11 @@
 {
-
+  "contacts": [
+    {
+      "phone": "+1234",
+      "name": "number from CreateContactForm",
+      "company": "company  from CreateContactForm",
+      "email": "email  from CreateContactForm",
+      "id": 1
+    }
+  ]
 }
