@@ -17,10 +17,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "mocha": "mocha",
     "eject": "react-scripts eject",
-    "jsonserver": "json-server --watch db.json --port 8080"
+    "jsonserver": "json-server --watch db.json --port 8080",
+    "dev": "concurrently \"npm start\" \"npm run jsonserver\""
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
+    "mocha": "^5.1.1",
     "redux-logger": "^3.0.6"
   }
 }

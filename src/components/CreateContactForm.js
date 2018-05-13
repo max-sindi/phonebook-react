@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createContact } from '../redux/actions/contacts';
+import validator from '../utils/formValidator';
 
 import { Form } from 'semantic-ui-react';
 
@@ -20,12 +21,13 @@ class CreateContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+
     const contact = {
       ...this.state,
       id: this.state.phone,
-    }
+    };
+
     this.props.createContact(contact);
-    // console.log(this.state);
   }
 
   render() {
@@ -58,7 +60,9 @@ class CreateContactForm extends Component {
             name='email'
             onChange={this.handleChange}
           />
-          <Form.Button/>
+          <Form.Button>
+            Create contact
+          </Form.Button>
         </Form>
       </div>
     )
